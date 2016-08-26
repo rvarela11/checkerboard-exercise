@@ -7,10 +7,11 @@ function makeGrid() {
     box.style.width = "11.1%";
     box.style.float = "left";
     box.style.paddingBottom = "11.1%";
-    var r = Math.floor(Math.random() * 250);
-    var g = Math.floor(Math.random() * 250);
-    var b = Math.floor(Math.random() * 250);
-    box.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+    if (i % 2 === 0) {
+      box.style.backgroundColor = "rgba(173, 33, 99, " + (0.02 * i) + ")";
+    } else {
+      box.style.backgroundColor = "rgba(13, 133, 199, " + (0.02 * i) + ")";
+    }
     body.appendChild(box);
   }
 }
